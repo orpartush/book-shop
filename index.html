@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Books Shop</title>
+</head>
+
+<body onload="onInit()">
+  <header class="title-container">
+    <div class="title">Books Shop</div>
+ </header>
+
+  <main class="books-container">
+    <table>
+      <tbody class="books"></tbody>
+    </table>
+  </main>
+
+  <div class="page-btns-container">
+    <button class="page-btn" onclick="onChangePage(-1)">Prev Page</button>
+    <button class="page-btn" onclick="onChangePage(1)">Next Page</button>
+  </div>
+
+  <section hidden class="update-price-container">
+    <input type="text" class="update-price" placeholder="New price">
+    <button class="btn update-btn hidden-update-btn" data-id="" onclick="onUpdateBook(this)">
+      Update
+    </button>
+  </section>
+
+  <section class="add-book-container">
+    <p class="add-book" onclick="onToggleAddBook(this)">Add new book</p>
+    <section hidden class="add-book-form">
+      <input type="text" class="new-book-name" placeholder="Book name">
+      <input type="text" class="new-book-price" placeholder="Book price">
+      <input type="text" class="new-book-img" name="pic" placeholder="Book image">
+      <button class="btn add-book-btn" onclick="onAddBook()">Add</button>
+    </section>
+  </section>
+
+
+  <section hidden class="book-details"></section>
+
+  <script src="js/storage-service.js"></script>
+  <script src="js/book-service.js"></script>
+  <script src="js/book-controller.js"></script>
+</body>
+
+</html>
