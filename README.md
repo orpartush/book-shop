@@ -1,3 +1,3 @@
 # book-shop
 
-https://orpartush.github.io/books-shop/
+Check it out: https://orpartush.github.io/books-shop/
